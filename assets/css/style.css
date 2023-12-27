@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Nunito:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #618264;
+}
+
+header {
+  top: 0;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  background-color: #79ac78;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.main_header {
+  display: flex;
+}
+
+.head_title {
+  flex: 1;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.head_title > h1 {
+  color: #d0e7d2;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+}
+
+.head_nav {
+  flex: 1;
+  display: flex;
+  padding: 1rem;
+  margin-right: 1rem;
+  align-items: center;
+  justify-content: end;
+  gap: 1.5rem;
+}
+
+.head_nav > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.head_nav > ul > li {
+  list-style: none;
+}
+
+.head_nav > ul > li > a {
+  font-size: 14px;
+  color: #d0e7d2;
+  text-decoration: none;
+}
+
+.head_nav > ul > li > a:hover {
+  color: #618264;
+}
+
+.hamburger_menu > a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hamburger_menu > a > span {
+  height: 3px;
+  width: 28px;
+  background-color: #618264;
+  transition: 0.5s;
+}
+
+.first_line {
+  transform: rotateZ(45deg) translateY(8.5px);
+}
+
+.second_line {
+  transform: translateX(100px);
+}
+
+.third_line {
+  transform: rotateZ(-45deg) translateY(-8.5px);
+}
+
+.sub_header {
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  top: 70px;
+  position: fixed;
+  transition: 0.5s;
+  background-color: #618264;
+  box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.sub_header > ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.sub_header > ul > li {
+  list-style: none;
+  text-align: center;
+}
+
+.sub_header > ul > li > a {
+  color: #d0e7d2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.sub_header > ul > li > a:hover {
+  color: #79ac78;
+}
+
+.side_bar {
+  transform: translateX(260px);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.homepage {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/home.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.homepage_container {
+  width: 75%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.homepage_container > h2 {
+  font-size: 1.5rem;
+  color: #d0e7d2;
+}
+
+.homepage_container > p {
+  font-size: 14px;
+  color: #d0e7d2;
+}
+
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #aec3ae;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+  gap: 1rem;
+}
+
+article > .content_title > h3 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+article > .content_img {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+article > .content_img > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+article > .content_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+article > .content_desc > p {
+  color: black;
+  font-size: 14px;
+  text-indent: 8px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+  background-color: #aec3ae;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+  gap: 1rem;
+}
+
+aside > .profile_img {
+  display: flex;
+  justify-content: center;
+}
+
+aside > .profile_img > img {
+  width: 60%;
+  border-radius: 50%;
+}
+
+aside > .profile_bio {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 8px;
+}
+
+aside > .profile_bio > .name {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+aside > .profile_bio > p {
+  color: black;
+  font-size: 14px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.comment_title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment_title > h3 {
+  font-size: 18px;
+  color: #d0e7d2;
+}
+
+.comment_title > p {
+  font-size: 14px;
+}
+
+.comment_area {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #aec3ae;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+  gap: 8px;
+}
+
+.comment_area > .input_box {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.comment_area > .input_box:focus {
+  outline: 2px solid #79ac78;
+}
+
+.submit_btn {
+  display: flex;
+  justify-content: end;
+}
+
+.submit_btn > button {
+  width: 80px;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  color: #aec3ae;
+  border-radius: 8px;
+  background-color: #618264;
+  cursor: pointer;
+}
+
+.submit_btn > button:hover {
+  background-color: #79ac78;
+}
+
+.comment_result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  gap: 8px;
+}
+
+.user {
+  font-size: 18px;
+  color: #aec3ae;
+  text-transform: uppercase;
+}
+
+.comment_result > p {
+  font-size: 14px;
+}
+
+.show_comment {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #aec3ae;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  background-color: #79ac78;
+  box-shadow: 0 -0.5px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+footer > p {
+  font-size: 12px;
+}
+
+footer > p > span {
+  color: #d0e7d2;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger_menu {
+    display: block;
+  }
+
+  .head_nav > ul {
+    display: none;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  aside > .profile_img > img {
+    width: 35%;
+  }
+
+  .comment_title > p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .sub_header {
+    top: 108px;
+  }
+}
